@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MobileStore - Premium Mobile Devices</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <!-- ========================================== -->
+<!-- GLOBAL HEADER - Import on all pages        -->
+<!-- ========================================== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile<span>Store</span></span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search 500+ phones..." />
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="account.html" class="header-icon" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="header-icon cart-icon" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+                <li><a href="product.html?category=android" class="nav-link">Android</a></li>
+                <li><a href="product.html?category=iphone" class="nav-link">iPhone</a></li>
+                <li><a href="product.html?category=infinix" class="nav-link">Infinix</a></li>
+                <li><a href="product.html?category=nokia" class="nav-link">Nokia</a></li>
+                <li><a href="product.html?category=readme" class="nav-link">Readme</a></li>
+                <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+                <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+            <li><a href="product.html?category=android" class="nav-link"><i class="fab fa-android"></i> Android</a></li>
+            <li><a href="product.html?category=iphone" class="nav-link"><i class="fab fa-apple"></i> iPhone</a></li>
+            <li><a href="product.html?category=infinix" class="nav-link"><i class="fas fa-mobile-alt"></i> Infinix</a></li>
+            <li><a href="product.html?category=nokia" class="nav-link"><i class="fas fa-phone"></i> Nokia</a></li>
+            <li><a href="product.html?category=readme" class="nav-link"><i class="fas fa-book-open"></i> Readme</a></li>
+            <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+            <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <span class="hero-badge">🔥 Best Deals of 2026</span>
+                    <h1>Discover Your <span>Perfect</span> Mobile Device</h1>
+                    <p>Shop from 500+ premium smartphones from top brands like Apple, Samsung, OnePlus, and more. Get the best prices with guaranteed quality.</p>
+                    <div class="hero-buttons">
+                        <a href="product.html" class="btn-primary btn-large">
+                            <i class="fas fa-shopping-cart"></i> Start Shopping
+                        </a>
+                        <a href="#featured" class="btn-secondary btn-large">
+                            <i class="fas fa-play-circle"></i> Explore Now
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9★</span>
+                            <span class="stat-label">Average Rating</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=600&fit=crop" alt="Smartphone" />
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-star" style="color: #f59e0b;"></i>
+                            <span>4.9 Rating</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-truck" style="color: #6366f1;"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-shield-alt" style="color: #10b981;"></i>
+                            <span>2 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRUST BADGES ========== -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <h4>Free Delivery</h4>
+                        <p>On orders over $199</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-rotate-left"></i>
+                    <div>
+                        <h4>30-Day Returns</h4>
+                        <p>Money-back guarantee</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-lock"></i>
+                    <div>
+                        <h4>Secure Payment</h4>
+                        <p>128-bit encryption</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated assistance</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h4>Authorized Dealer</h4>
+                        <p>100% genuine products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORIES SECTION ========== -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">Shop by Category</span>
+                    <h2 class="section-title">Find Your <span>Perfect Match</span></h2>
+                </div>
+                <a href="product.html" class="view-all">View All Categories <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">Best Sellers</span>
+                    <h2 class="section-title">Featured <span>Phones</span></h2>
+                </div>
+                <a href="product.html" class="view-all">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY US SECTION ========== -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="why-us-wrapper">
+                <div class="why-us-content">
+                    <span class="section-tag">Why Choose Us</span>
+                    <h2>We Make Buying <span>Phones Easy</span></h2>
+                    <p>Experience the best mobile shopping journey with unmatched service and selection.</p>
+                    
+                    <div class="why-grid">
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Curated Selection</h4>
+                                <p>Hand-picked phones from trusted brands</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div>
+                                <h4>Best Prices</h4>
+                                <p>Price match guarantee on all devices</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Easy Returns</h4>
+                                <p>Hassle-free returns within 30 days</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>All products are 100% authentic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-image">
+                    <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600&h=600&fit=crop" alt="Why Choose Us" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our <span>Customers Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing experience! The phone arrived in perfect condition. Best price I could find online."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="John" />
+                        <div>
+                            <h4>John Doe</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent customer service! They helped me choose the perfect phone for my needs."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah" />
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Fast shipping, great quality, and amazing prices. I'll definitely be shopping here again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Mike" />
+                        <div>
+                            <h4>Mike Anderson</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="cta-content">
+                    <h2>Ready to Find <span>Your Next Phone?</span></h2>
+                    <p>Join 50,000+ satisfied customers and get the best deals on premium mobile devices.</p>
+                    <div class="cta-buttons">
+                        <a href="product.html" class="btn-primary btn-large">
+                            <i class="fas fa-shopping-cart"></i> Shop Now
+                        </a>
+                        <a href="#featured" class="btn-secondary btn-large">
+                            <i class="fas fa-arrow-down"></i> Explore Deals
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-image">
+                    <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=400&h=400&fit=crop" alt="Shop" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile<span>Store</span></span>
+                    </a>
+                    <p>Your trusted destination for premium mobile devices since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="product.html?category=android">Android</a></li>
+                        <li><a href="product.html?category=iphone">iPhone</a></li>
+                        <li><a href="product.html?category=infinix">Infinix</a></li>
+                        <li><a href="product.html?category=nokia">Nokia</a></li>
+                        <li><a href="product.html?category=readme">Readme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@mobilestore.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mobile St, NYC</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MobileStore. All rights reserved. Made with <i class="fas fa-heart" style="color: #ef4444;"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/login.js"></script>
+    <script src="data/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

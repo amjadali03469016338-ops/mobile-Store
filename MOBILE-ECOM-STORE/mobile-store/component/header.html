@@ -1,0 +1,88 @@
+<!-- ========================================== -->
+<!-- GLOBAL HEADER - Import on all pages        -->
+<!-- ========================================== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile<span>Store</span></span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search 500+ phones..." />
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- User Profile Dropdown -->
+                <div class="user-profile-dropdown">
+                    <button class="header-icon profile-btn" id="profileBtn" aria-label="Profile">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="profile-menu" id="profileMenu">
+                        <div class="profile-header" id="profileHeader">
+                            <p id="userName">User</p>
+                            <p id="userEmail" class="user-email"></p>
+                        </div>
+                        <a href="account.html" class="profile-menu-item">
+                            <i class="fas fa-user-circle"></i> My Account
+                        </a>
+                        <a href="cart.html" class="profile-menu-item">
+                            <i class="fas fa-shopping-bag"></i> My Cart
+                        </a>
+                        <hr class="profile-divider">
+                        <button class="profile-menu-item logout-btn" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+                
+                <a href="cart.html" class="header-icon cart-icon" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+                <li><a href="product.html?category=android" class="nav-link">Android</a></li>
+                <li><a href="product.html?category=iphone" class="nav-link">iPhone</a></li>
+                <li><a href="product.html?category=infinix" class="nav-link">Infinix</a></li>
+                <li><a href="product.html?category=nokia" class="nav-link">Nokia</a></li>
+                <li><a href="product.html?category=readme" class="nav-link">Readme</a></li>
+                <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+                <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+            <li><a href="product.html?category=android" class="nav-link"><i class="fab fa-android"></i> Android</a></li>
+            <li><a href="product.html?category=iphone" class="nav-link"><i class="fab fa-apple"></i> iPhone</a></li>
+            <li><a href="product.html?category=infinix" class="nav-link"><i class="fas fa-mobile-alt"></i> Infinix</a></li>
+            <li><a href="product.html?category=nokia" class="nav-link"><i class="fas fa-phone"></i> Nokia</a></li>
+            <li><a href="product.html?category=readme" class="nav-link"><i class="fas fa-book-open"></i> Readme</a></li>
+            <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+            <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+        </ul>
+    </nav>
+</header>

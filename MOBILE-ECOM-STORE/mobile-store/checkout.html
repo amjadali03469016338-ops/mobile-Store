@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - MobileStore</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile<span>Store</span></span>
+                </a>
+                <div class="header-actions">
+                    <a href="account.html" class="header-icon"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="header-icon cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="product.html"><i class="fas fa-list"></i> Products</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+                <li><a href="account.html"><i class="fas fa-user"></i> Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== CHECKOUT SECTION ========== -->
+    <section class="checkout-page">
+        <div class="container">
+            <h2 class="page-title"><i class="fas fa-credit-card"></i> Checkout</h2>
+            
+            <div class="checkout-layout">
+                <!-- Billing Form -->
+                <form class="checkout-form" id="checkoutForm">
+                    <div class="form-section">
+                        <h3>Shipping Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" placeholder="John Doe" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" placeholder="john@example.com" required />
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" placeholder="+1 234 567 890" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address *</label>
+                                <input type="text" id="address" placeholder="123 Main St" required />
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" placeholder="New York" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code *</label>
+                                <input type="text" id="zip" placeholder="10001" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="card" checked />
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="paypal" />
+                                <i class="fab fa-paypal"></i> PayPal
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" />
+                                <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                            </label>
+                        </div>
+                        
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number *</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date *</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" placeholder="123" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="cart.html" class="btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back to Cart
+                        </a>
+                        <button type="submit" class="btn-primary" id="placeOrderBtn">
+                            Place Order <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Order Summary -->
+                <aside class="order-summary">
+                    <h3>Your Order</h3>
+                    <div id="orderItems">
+                        <!-- Order items will be injected by JS -->
+                    </div>
+                    <hr />
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax (10%)</span>
+                        <span id="checkoutTax">$0.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="checkoutTotal">$0.00</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MobileStore</h3>
+                    <p>Your one-stop shop for premium mobile devices</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="product.html?category=android">Android</a></li>
+                        <li><a href="product.html?category=iphone">iPhone</a></li>
+                        <li><a href="product.html?category=infinix">Infinix</a></li>
+                        <li><a href="product.html?category=nokia">Nokia</a></li>
+                        <li><a href="product.html?category=readme">Readme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="account.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@mobilestore.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MobileStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/login.js"></script>
+    <script src="data/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - MobileStore</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile<span>Store</span></span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search 500+ phones..." />
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="account.html" class="header-icon" aria-label="Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="header-icon cart-icon" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+                <li><a href="product.html?category=android" class="nav-link">Android</a></li>
+                <li><a href="product.html?category=iphone" class="nav-link">iPhone</a></li>
+                <li><a href="product.html?category=infinix" class="nav-link">Infinix</a></li>
+                <li><a href="product.html?category=nokia" class="nav-link">Nokia</a></li>
+                <li><a href="product.html?category=readme" class="nav-link">Readme</a></li>
+                <li><a href="product.html?category=realme" class="nav-link">Realme</a></li>
+                <li><a href="product.html?category=oppo" class="nav-link">OPPO</a></li>
+                <li><a href="product.html?category=vivo" class="nav-link">Vivo</a></li>
+                <li><a href="product.html?category=tecno" class="nav-link">Tecno</a></li>
+                <li><a href="product.html?category=asus" class="nav-link">Asus</a></li>
+                <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+                <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="product.html" class="nav-link" data-page="products"><i class="fas fa-list"></i> Products</a></li>
+            <li><a href="product.html?category=android" class="nav-link"><i class="fab fa-android"></i> Android</a></li>
+            <li><a href="product.html?category=iphone" class="nav-link"><i class="fab fa-apple"></i> iPhone</a></li>
+            <li><a href="product.html?category=infinix" class="nav-link"><i class="fas fa-mobile-alt"></i> Infinix</a></li>
+            <li><a href="product.html?category=nokia" class="nav-link"><i class="fas fa-phone"></i> Nokia</a></li>
+            <li><a href="product.html?category=readme" class="nav-link"><i class="fas fa-book-open"></i> Readme</a></li>
+            <li><a href="product.html?category=realme" class="nav-link"><i class="fas fa-mobile-screen-button"></i> Realme</a></li>
+            <li><a href="product.html?category=oppo" class="nav-link"><i class="fas fa-camera-retro"></i> OPPO</a></li>
+            <li><a href="product.html?category=vivo" class="nav-link"><i class="fas fa-mobile-alt"></i> Vivo</a></li>
+            <li><a href="product.html?category=tecno" class="nav-link"><i class="fas fa-sim-card"></i> Tecno</a></li>
+            <li><a href="product.html?category=asus" class="nav-link"><i class="fas fa-laptop"></i> Asus</a></li>
+            <li><a href="cart.html" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Cart</a></li>
+            <li><a href="account.html" class="nav-link" data-page="account"><i class="fas fa-user"></i> Account</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <button id="closeFilters"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-options" id="categoryFilters">
+                            <label><input type="radio" name="category" value="all" checked /> All</label>
+                            <label><input type="radio" name="category" value="android" /> Android</label>
+                            <label><input type="radio" name="category" value="iphone" /> iPhone</label>
+                            <label><input type="radio" name="category" value="infinix" /> Infinix</label>
+                            <label><input type="radio" name="category" value="nokia" /> Nokia</label>
+                            <label><input type="radio" name="category" value="readme" /> Readme</label>
+                            <label><input type="radio" name="category" value="realme" /> Realme</label>
+                            <label><input type="radio" name="category" value="oppo" /> OPPO</label>
+                            <label><input type="radio" name="category" value="vivo" /> Vivo</label>
+                            <label><input type="radio" name="category" value="tecno" /> Tecno</label>
+                            <label><input type="radio" name="category" value="asus" /> Asus</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="2000" value="2000" step="50" />
+                            <div class="price-values">
+                                <span>$0</span>
+                                <span id="priceDisplay">$2000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <div class="filter-options" id="ratingFilters">
+                            <label><input type="radio" name="rating" value="0" checked /> All</label>
+                            <label><input type="radio" name="rating" value="4" /> 4★ & Up</label>
+                            <label><input type="radio" name="rating" value="3" /> 3★ & Up</label>
+                            <label><input type="radio" name="rating" value="2" /> 2★ & Up</label>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" id="applyFilters">Apply Filters</button>
+                    <button class="btn-secondary" id="clearFilters">Clear All</button>
+                </aside>
+
+                <!-- Products Main Content -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <h2 id="productsTitle">All Products</h2>
+                        <div class="products-controls">
+                            <span id="productsCount">0 products</span>
+                            <select id="sortSelect">
+                                <option value="default">Sort By</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="popular">Most Popular</option>
+                            </select>
+                            <button class="filter-toggle" id="filterToggle">
+                                <i class="fas fa-sliders-h"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be injected by JavaScript -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <button id="prevPage"><i class="fas fa-chevron-left"></i></button>
+                        <span id="pageInfo">Page 1 of 1</span>
+                        <button id="nextPage"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MobileStore</h3>
+                    <p>Your one-stop shop for premium mobile devices</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="product.html?category=android">Android</a></li>
+                        <li><a href="product.html?category=iphone">iPhone</a></li>
+                        <li><a href="product.html?category=infinix">Infinix</a></li>
+                        <li><a href="product.html?category=nokia">Nokia</a></li>
+                        <li><a href="product.html?category=readme">Readme</a></li>
+                        <li><a href="product.html?category=realme">Realme</a></li>
+                        <li><a href="product.html?category=oppo">OPPO</a></li>
+                        <li><a href="product.html?category=vivo">Vivo</a></li>
+                        <li><a href="product.html?category=tecno">Tecno</a></li>
+                        <li><a href="product.html?category=asus">Asus</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="account.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@mobilestore.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MobileStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== PRODUCT DETAIL MODAL ========== -->
+    <div class="product-modal-backdrop" id="productModalBackdrop" hidden>
+        <div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+            <button class="modal-close" id="closeProductModal" aria-label="Close product details">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="productModalContent"></div>
+        </div>
+    </div>
+
+    <!-- ========== TOAST NOTIFICATION ========== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/login.js"></script>
+    <script src="data/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

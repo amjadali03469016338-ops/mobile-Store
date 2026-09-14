@@ -1,0 +1,35 @@
+mobile-store/
+│
+├── index.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── account.html
+│
+├── css/
+│   ├── style.css
+│   ├── product.css
+│   ├── cart.css
+│   ├── checkout.css
+│   └── account.css
+│
+├── js/
+│   ├── main.js
+│   ├── product.js
+│   ├── cart.js
+│   ├── checkout.js
+│   ├── account.js
+│   └── utils.js
+│
+├── data/
+│   └── data.js
+│
+├── assets/
+│   ├── images/
+│   │   ├── products/
+│   │   ├── categories/
+│   │   └── icons/
+│   ├── fonts/
+│   └── placeholder/
+│
+└── README.md

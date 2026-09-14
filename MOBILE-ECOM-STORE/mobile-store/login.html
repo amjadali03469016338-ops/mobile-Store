@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-mobile-alt"></i>
+                <h1>Mobile Store</h1>
+                <p>Your Premium Mobile Hub</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required
+                    >
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Your account is saved locally in this browser.</p>
+                <p>Use any valid email and password to login.</p>
+            </div>
+
+            <div class="signup-link">
+                Need an account? <a href="#" id="signupLink">Create one on first login</a>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

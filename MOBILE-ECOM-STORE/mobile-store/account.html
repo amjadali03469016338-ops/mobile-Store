@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - MobileStore</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/account.css" />
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <div id="header-container"></div>
+    
+    <!-- ========== ACCOUNT SECTION ========== -->
+    <section class="account-page">
+        <div class="container">
+            <h2 class="page-title"><i class="fas fa-user-circle"></i> My Account</h2>
+            
+            <div class="account-layout">
+                <!-- Account Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="user-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 id="displayName">Welcome</h3>
+                        <p id="displayEmail">user@example.com</p>
+                    </div>
+
+                    <nav class="account-menu">
+                        <a href="#profile" class="menu-item active" data-section="profile">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+                        <a href="#orders" class="menu-item" data-section="orders">
+                            <i class="fas fa-shopping-bag"></i> My Orders
+                        </a>
+                        <a href="#wishlist" class="menu-item" data-section="wishlist">
+                            <i class="fas fa-heart"></i> Wishlist
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Account Content -->
+                <main class="account-content">
+                    <!-- Profile Section -->
+                    <div id="profile" class="content-section active">
+                        <h3>Personal Information</h3>
+                        <div class="profile-info">
+                            <div class="info-row">
+                                <label>Full Name</label>
+                                <p id="infoName">-</p>
+                            </div>
+                            <div class="info-row">
+                                <label>Email Address</label>
+                                <p id="infoEmail">-</p>
+                            </div>
+                            <div class="info-row">
+                                <label>Member Since</label>
+                                <p id="infoMemberSince">-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div id="orders" class="content-section">
+                        <h3>Order History</h3>
+                        <div class="orders-list" id="ordersList">
+                            <p class="empty-message">No orders yet. <a href="product.html">Start shopping</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Section -->
+                    <div id="wishlist" class="content-section">
+                        <h3>My Wishlist</h3>
+                        <div class="wishlist-grid" id="wishlistGrid">
+                            <p class="empty-message">Your wishlist is empty</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <div id="footer-container"></div>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/login.js"></script>
+    <script src="data/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/header-loader.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
